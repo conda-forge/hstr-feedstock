@@ -8,5 +8,5 @@ autoreconf --force --verbose --install
     --prefix=${PREFIX} \
     --libdir=${PREFIX}/lib
 
-make check
+make -j${CPU_COUNT} check
 make -j${CPU_COUNT} install
