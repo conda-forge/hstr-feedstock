@@ -2,11 +2,14 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
+# Remove line that fails on cross-compile
+sed -i '/AC_CHECK_FILE/d' configure.ac
+
 autoreconf --force --verbose --install
 ./configure --disable-debug \
     --disable-dependency-tracking \
     --prefix=${PREFIX} \
     --libdir=${PREFIX}/lib
 
-make check
+make -j${CPU_COUNT} check
 make -j${CPU_COUNT} install
