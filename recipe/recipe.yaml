@@ -21,6 +21,7 @@ requirements:
     - automake
     - pkg-config
     - make
+    - sed
   host:
     - bash-completion
     - libtool
