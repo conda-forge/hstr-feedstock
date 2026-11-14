@@ -1,5 +1,5 @@
 context:
-  version: "3.2"
+  version: "3.3"
 
 package:
   name: hstr
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dvorka/hstr/archive/v${{ version }}.tar.gz
-  sha256: bceab1cb3c3b636d9ff4dfbaf8b035530e76a36d948767ed1735c4e79d7473eb
+  sha256: 3ed81ff74995c5984ce0dcaec7f27afe6256632a96ada809a6c41f9b46abcdf6
 
 build:
   number: 0
